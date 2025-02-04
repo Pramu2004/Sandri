@@ -20,8 +20,8 @@
             cursor: pointer;
         }
         .envelope {
-            width: 300px;
-            height: 180px;
+            width: 400px;
+            height: 250px;
             background: #d43f3f;
             position: relative;
             border-radius: 10px;
@@ -32,21 +32,21 @@
         .envelope .flap {
             width: 0;
             height: 0;
-            border-left: 150px solid transparent;
-            border-right: 150px solid transparent;
-            border-bottom: 90px solid #ff6666;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-bottom: 120px solid #ff6666;
             position: absolute;
-            top: -90px;
+            top: -120px;
             left: 0;
             transition: transform 0.5s ease-in-out;
             transform-origin: top;
         }
         .photo {
-            width: 260px;
-            height: 140px;
+            width: 380px;
+            height: auto;
             position: absolute;
-            top: 30px;
-            left: 20px;
+            top: 20px;
+            left: 10px;
             display: none;
             transition: transform 0.5s ease-in-out;
             border-radius: 5px;
@@ -57,7 +57,7 @@
         }
         .show-letter .photo {
             display: block;
-            transform: translateY(-60px);
+            transform: translateY(-100px);
         }
     </style>
 </head>
