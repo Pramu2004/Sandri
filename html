@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            cursor: pointer;
+        }
+        .envelope {
+            width: 300px;
+            height: 180px;
+            background: #d43f3f;
+            position: relative;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .envelope .flap {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 90px solid #ff6666;
+            position: absolute;
+            top: -90px;
+            left: 0;
+            transition: transform 0.5s ease-in-out;
+            transform-origin: top;
+        }
+        .photo {
+            width: 260px;
+            height: 140px;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            display: none;
+            transition: transform 0.5s ease-in-out;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .show-letter .flap {
+            transform: rotateX(180deg);
+        }
+        .show-letter .photo {
+            display: block;
+            transform: translateY(-60px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" onclick="openLetter()">
+        <div class="envelope">
+            <div class="flap"></div>
+            <div class="body"></div>
+        </div>
+        <img src="img.jpg" class="photo" alt="Valentine Photo">
+    </div>
+
+    <script>
+        function openLetter() {
+            document.querySelector('.container').classList.toggle('show-letter');
+        }
+    </script>
+</body>
+</html>
